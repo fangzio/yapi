@@ -4,7 +4,8 @@ module.exports = async function sandboxFn(context, script) {
     // 创建 safeify 实例
     const safeVm = new Safeify({
         timeout: 3000,
-        asyncTimeout: 60000
+        asyncTimeout: 60000,
+        unrestricted: true
     })
 
     script += "; return this;";
